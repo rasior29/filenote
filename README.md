@@ -1,55 +1,52 @@
-# FileNote - File Comment Management Tool
+# FileNote
 
-A simple command-line tool to add and manage file comments on Linux/Unix systems.
+Un outil en ligne de commande simple pour gérer les commentaires de fichiers sur les systèmes Linux/Unix.
 
-## Description
-FileNote lets you attach descriptive comments to your files without altering the originals.  
-Main commands:  
-- **`filenote-add`**: Add a comment to a file  
-- **`filenote-list`**: List files with their comments  
+FileNote vous permet d'attacher des commentaires descriptifs à vos fichiers sans modifier les originaux.
 
 ## Installation
+
 ```bash
-# Clone and install
-git clone https://github.com/your-username/filenote.git
+git clone https://github.com/rasior29/filenote.git
 cd filenote
 make install
-Or compile manually:
+```
 
-bash
-Copier
-Modifier
+Ou compilation manuelle :
+```bash
 gcc filenote-add.c -o filenote-add
 gcc filenote-list.c -o filenote-list
 sudo cp filenote-add filenote-list /usr/local/bin/
-Usage
-Add a comment:
+```
 
-bash
-Copier
-Modifier
-filenote-add myfile.txt "File description"
-List files:
+## Utilisation
 
-bash
-Copier
-Modifier
-filenote-list              # All files
-filenote-list -c           # Only commented files
-filenote-list -d /path     # Another directory
-Key options:
+### Ajouter un commentaire
+```bash
+filenote-add myfile.txt "Description du fichier"
+```
 
--c: Only show commented files
+### Lister les fichiers
+```bash
+filenote-list              # Tous les fichiers
+filenote-list -c           # Seulement les fichiers commentés
+filenote-list -d /chemin   # Répertoire spécifique
+```
 
--d <dir>: Specify directory
+## Options principales
 
--v: Verbose mode
+- `-c` : Afficher uniquement les fichiers commentés
+- `-d <dir>` : Spécifier un répertoire
+- `-v` : Mode verbose
 
-Internal Structure
-Comments are stored in the filenote_comments/ directory as plain text files.
+## Structure interne
 
-License
-MIT License – see the LICENSE file.
+Les commentaires sont stockés dans le répertoire `filenote_comments/` sous forme de fichiers texte.
 
-Author
-Created by rasior29.
+## Licence
+
+MIT License
+
+## Auteur
+
+Créé par rasior29
