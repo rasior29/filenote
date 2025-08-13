@@ -1,0 +1,18 @@
+# Compiled binaries
+filenote-add
+filenote-list
+*.o
+*.exe
+
+# Comment directories (user data)
+filenote_comments/
+
+# Editor files
+*~
+.*.swp
+.vscode/
+*.bak
+
+# OS files
+.DS_Store
+Thumbs.db
