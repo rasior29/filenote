@@ -1,8 +1,8 @@
 # FileNote
 
-Un outil en ligne de commande simple pour gérer les commentaires de fichiers sur les systèmes Linux/Unix.
+A simple command-line tool for managing file comments on Linux/Unix systems.
 
-FileNote vous permet d'attacher des commentaires descriptifs à vos fichiers sans modifier les originaux.
+FileNote lets you attach descriptive comments to your files without altering the originals.
 
 ## Installation
 
@@ -12,41 +12,41 @@ cd filenote
 make install
 ```
 
-Ou compilation manuelle :
+Or compile manually:
 ```bash
 gcc filenote-add.c -o filenote-add
 gcc filenote-list.c -o filenote-list
 sudo cp filenote-add filenote-list /usr/local/bin/
 ```
 
-## Utilisation
+## Usage
 
-### Ajouter un commentaire
+### Add a comment
 ```bash
-filenote-add myfile.txt "Description du fichier"
+filenote-add myfile.txt "File description"
 ```
 
-### Lister les fichiers
+### List files
 ```bash
-filenote-list              # Tous les fichiers
-filenote-list -c           # Seulement les fichiers commentés
-filenote-list -d /chemin   # Répertoire spécifique
+filenote-list              # All files
+filenote-list -c           # Only commented files
+filenote-list -d /path     # Specific directory
 ```
 
-## Options principales
+## Key Options
 
-- `-c` : Afficher uniquement les fichiers commentés
-- `-d <dir>` : Spécifier un répertoire
-- `-v` : Mode verbose
+- `-c`: Only show commented files
+- `-d <dir>`: Specify directory
+- `-v`: Verbose mode
 
-## Structure interne
+## Internal Structure
 
-Les commentaires sont stockés dans le répertoire `filenote_comments/` sous forme de fichiers texte.
+Comments are stored in the `filenote_comments/` directory as plain text files.
 
-## Licence
+## License
 
 MIT License
 
-## Auteur
+## Author
 
-Créé par rasior29
+Created by rasior29
